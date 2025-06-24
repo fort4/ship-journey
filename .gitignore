@@ -1,0 +1,23 @@
+# Unity
+[Ll]ibrary/
+[Tt]emp/
+[Oo]bj/
+# WebGL 빌드물 업로드 안할거면 제외
+[Bb]uild/ 
+[Bb]uilds/
+[Ll]ogs/
+MemoryCaptures/
+
+# OS 및 IDE
+.DS_Store
+*.csproj
+*.unityproj
+*.sln
+*.user
+.vscode/
+.idea/
+
+# 기타
+*.apk
+*.zip
+*.exe
