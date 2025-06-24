@@ -11,6 +11,10 @@ public class ThirdPersonCamera : MonoBehaviour
 	[SerializeField] private float yMinLimit = -20f; // 수직 회전 최소 각도
 	[SerializeField] private float yMaxLimit = 80f; // 수직 회전 최대 각도
 
+	[Header("마우스 커서 토글")]
+	[SerializeField] private KeyCode cursorToggleKey = KeyCode.Escape; // 마우스 커서 상태를 전환할 키
+	private bool isCursorLocked = true; // 현재 마우스 커서 잠금 상태 (true: 잠김, false: 풀림)
+
 	private float currentX = 0f;
 	private float currentY = 0f;
 
@@ -18,7 +22,7 @@ public class ThirdPersonCamera : MonoBehaviour
 	{
 		if (target == null)
 		{
-			Debug.LogError("ThirdPersonCamera 스크립트에 타겟(Target)이 할당되지 않았음!.");
+			Debug.LogError("ThirdViewCamera 스크립트에 타겟(Target)이 할당되지 않았음!.");
 			enabled = false;
 			return;
 		}
@@ -33,17 +37,49 @@ public class ThirdPersonCamera : MonoBehaviour
 		currentX = angles.y;
 		currentY = angles.x;
 
-		// 마우스 커서 숨기기 및 잠금
-		Cursor.lockState = CursorLockMode.Locked;
-		Cursor.visible = false;
+		// 마우스 커서 초기 상태 설정
+		// isCursorLocked 초기값에 따라 커서 상태를 결정
+		if (isCursorLocked)
+		{
+			Cursor.lockState = CursorLockMode.Locked;
+			Cursor.visible = false;
+		}
+		else
+		{
+			Cursor.lockState = CursorLockMode.None;
+			Cursor.visible = true;
+		}
 	}
 
 	void LateUpdate()
 	{
-		// 마우스 입력으로 카메라 회전
-		currentX += Input.GetAxis("Mouse X") * rotationSpeed;
-		currentY -= Input.GetAxis("Mouse Y") * rotationSpeed;
-		currentY = ClampAngle(currentY, yMinLimit, yMaxLimit);
+		// 마우스 커서 상태 전환 (Escape 키 입력 감지)
+		if (Input.GetKeyDown(cursorToggleKey))
+		{
+			isCursorLocked = !isCursorLocked; // 상태 반전
+
+			if (isCursorLocked) // 커서 잠금 모드로 전환할 때
+			{
+				Cursor.lockState = CursorLockMode.Locked; // 커서 잠금
+				Cursor.visible = false; // 커서 숨기기
+			}
+			else // 커서 잠금 해제 모드로 전환할 때 (UI 조작 가능)
+			{
+				Cursor.lockState = CursorLockMode.None; // 커서 잠금 해제
+				Cursor.visible = true; // 커서 보이게
+			}
+		}
+
+		// 마우스 커서가 잠겨 있을 때만 카메라 회전 로직을 실행함
+		if (isCursorLocked) // isCursorLocked 변수를 사용
+		{
+			//currentX += Input.GetAxis("Mouse X") * rotationSpeed * Time.deltaTime;
+			//currentY -= Input.GetAxis("Mouse Y") * rotationSpeed * Time.deltaTime;
+			// Time.deltaTime을 제거하고 rotationSpeed를 직접적으로 사용하게 바꿈.
+			currentX += Input.GetAxis("Mouse X") * rotationSpeed;
+			currentY -= Input.GetAxis("Mouse Y") * rotationSpeed;
+			currentY = ClampAngle(currentY, yMinLimit, yMaxLimit);
+		}
 
 		Quaternion rotation = Quaternion.Euler(currentY, currentX, 0);
 

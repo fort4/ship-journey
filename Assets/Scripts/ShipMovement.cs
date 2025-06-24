@@ -43,6 +43,7 @@ public class ShipMovement : MonoBehaviour
 		rb.drag = 0f;
 		rb.angularDrag = 0f;
 		//initialRotation = transform.rotation; // 선박의 초기 회전 저장 (수평 상태)
+		Application.targetFrameRate = 40; // webgl 성능이 구려서 일단 설정해둠
 
 		// 물 튀김 지점 배열이 비어있으면 경고
 		if (splashPoints == null || splashPoints.Length == 0)

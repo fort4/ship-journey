@@ -9,7 +9,7 @@ onBoardingDoNotAskAgain = true
 showPackageIndexes = false
 showStatusBar = false
 scopes = {
-	"last_search.66F56946" = "layer colli"
+	"last_search.66F56946" = "max size"
 	"OpenInspectorPreview.66F56946" = "0"
 	"currentGroup.66F56946" = "all"
 }
@@ -83,6 +83,7 @@ providers = {
 objectSelectors = {
 }
 recentSearches = [
+	"a"
 	""
 ]
 searchItemFavorites = [

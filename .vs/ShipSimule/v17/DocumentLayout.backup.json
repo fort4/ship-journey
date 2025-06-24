@@ -3,7 +3,11 @@
   "WorkspaceRootPath": "C:\\Dev\\unity_workspace\\ShipSimule\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{138640FC-C4C7-8257-FA6C-D5BE42C63E85}|Assembly-CSharp.csproj|C:\\Dev\\unity_workspace\\ShipSimule\\assets\\scripts\\shipmovement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{138640FC-C4C7-8257-FA6C-D5BE42C63E85}|Assembly-CSharp.csproj|c:\\dev\\unity_workspace\\shipsimule\\assets\\scripts\\gameuimanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{138640FC-C4C7-8257-FA6C-D5BE42C63E85}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\gameuimanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{138640FC-C4C7-8257-FA6C-D5BE42C63E85}|Assembly-CSharp.csproj|c:\\dev\\unity_workspace\\shipsimule\\assets\\scripts\\shipmovement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{138640FC-C4C7-8257-FA6C-D5BE42C63E85}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\shipmovement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -18,7 +22,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Bookmark",
@@ -38,7 +42,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
+              "Title": "GameUIManager.cs",
+              "DocumentMoniker": "C:\\Dev\\unity_workspace\\ShipSimule\\Assets\\Scripts\\GameUIManager.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\GameUIManager.cs",
+              "ToolTip": "C:\\Dev\\unity_workspace\\ShipSimule\\Assets\\Scripts\\GameUIManager.cs",
+              "RelativeToolTip": "Assets\\Scripts\\GameUIManager.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAABcAAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-24T09:36:12.147Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "RadarSystem.cs",
               "DocumentMoniker": "C:\\Dev\\unity_workspace\\ShipSimule\\Assets\\Scripts\\RadarSystem.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\RadarSystem.cs",
@@ -46,18 +63,17 @@
               "RelativeToolTip": "Assets\\Scripts\\RadarSystem.cs",
               "ViewState": "AgIAAHgAAAAAAAAAAAAAAA0AAABRAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-22T07:02:28.68Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-22T07:02:28.68Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "ShipMovement.cs",
               "DocumentMoniker": "C:\\Dev\\unity_workspace\\ShipSimule\\Assets\\Scripts\\ShipMovement.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\ShipMovement.cs",
               "ToolTip": "C:\\Dev\\unity_workspace\\ShipSimule\\Assets\\Scripts\\ShipMovement.cs",
               "RelativeToolTip": "Assets\\Scripts\\ShipMovement.cs",
-              "ViewState": "AgIAAMwAAAAAAAAAAAAAAA8AAABEAAAAAAAAAA==",
+              "ViewState": "AgIAAMoAAAAAAAAAAABDwA8AAABEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-21T16:38:16.477Z",
               "EditorCaption": ""
